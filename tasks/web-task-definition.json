@@ -1,0 +1,59 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "nginx",
+      "image": "269286422109.dkr.ecr.eu-central-1.amazonaws.com/test/nginx",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "memory": 128,
+      "cpu": 50
+    },
+    {
+      "name": "application",
+      "image": "269286422109.dkr.ecr.eu-central-1.amazonaws.com/test/application",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000
+        }
+      ],
+      "memory": 128,
+      "cpu": 50
+    },
+    {
+      "name": "blog",
+      "image": "269286422109.dkr.ecr.eu-central-1.amazonaws.com/test/blog",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 8181
+        }
+      ],
+      "memory": 128,
+      "cpu": 50,
+      "environment": [
+        {
+          "name": "WORDPRESS_DB_HOST",
+          "value": "test-db.cyrv3tzrsvne.eu-central-1.rds.amazonaws.com"
+        },
+        {
+          "name": "WORDPRESS_DB_NAME",
+          "value": "blog"
+        },
+        {
+          "name": "WORDPRESS_DB_USER",
+          "value": "blog_user"
+        },
+        {
+          "name": "WORDPRESS_DB_PASSWORD",
+          "value": "blog_pass"
+        }
+      ]
+    }
+  ],
+  "family": "test-task-web"
+}

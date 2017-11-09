@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  wordpress:
+    image: wordpress
+    ports:
+      - 8181:80
+    environment:
+      WORDPRESS_DB_NAME: blog
+      WORDPRESS_DB_USER: blog_user
+      WORDPRESS_DB_PASSWORD: blog_pass
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: blog_pass
+      MYSQL_DATABASE: blog
+      MYSQL_USER: blog_user
+      MYSQL_PASSWORD: blog_pass
