@@ -221,8 +221,8 @@ aws rds describe-db-instances
 ```
 
 Results:          
-endpoint.address: test-db.cyrv3tzrsvne.eu-central-1.rds.amazonaws.com
-endpoint.port: 3306 (As expected)
+**endpoint.address**: test-db.cyrv3tzrsvne.eu-central-1.rds.amazonaws.com  
+**endpoint.port**: 3306 (As expected)  
 
 
 ### 8. Dockerize your Application
@@ -382,6 +382,7 @@ The script code is in deploy/deploy.sh
 ### 15. Visualization
 In this section we can see the architecture of current project
 
+![](images/architecture.png?raw=true)
 
 ## Future Work
 
@@ -392,5 +393,3 @@ that should change.
 2. It is very simple to add an SSL certificate to this project.
 
 3. VPC is a good solution in order to improve the security of our deployed code.  
-
-............................
