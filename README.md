@@ -383,13 +383,3 @@ The script code is in deploy/deploy.sh
 In this section we can see the architecture of current project
 
 ![](images/architecture.png?raw=true)
-
-## Future Work
-
-1. The result of this project is found on the following link: http://18.195.73.33/.
-During the redirect of wordpress sublink, the port is shown. This is a detail
-that should change.
-
-2. It is very simple to add an SSL certificate to this project.
-
-3. VPC is a good solution in order to improve the security of our deployed code.  
